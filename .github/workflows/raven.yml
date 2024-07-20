@@ -1,0 +1,17 @@
+name: raven 
+on:
+    workflow_dispatch:
+jobs:
+    build:
+        runs-on:
+            - self-hosted
+            - label-raven
+
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v3
+            - name: Run a one-line script
+              run: |
+                echo Hello, world!
+                sleep 45
+                echo Goodbye!
